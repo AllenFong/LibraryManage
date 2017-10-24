@@ -1,0 +1,113 @@
+<style type="text/css">  
+    /*设置上一级菜单的样式*/  
+    html,body  
+    {  
+        width:100%;  
+        height:100%;  
+        /*消除网页的边界*/  
+        margin:0px;  
+        padding:0px;  
+        border-style:none;  
+    }  
+    img{  
+	    width: auto;  
+	    height: auto;  
+	    max-width: 100%;  
+	    max-height: 80%;     
+	} 
+    #header{
+	    height:100px;
+	    background:RGB(216,216,216);
+	}    
+    #content  
+    {  
+	    height:100%;
+	    width:800px;
+	    margin:10px; 
+        margin:4px; 
+	    float:left;/*设置浮动，实现多列效果，div+Css布局中很重要的*/
+	    background:#b4e7fc; 
+    }  
+    #content td{
+    	font-size :12px;
+    	
+    }
+    .main{
+	    margin:10px; 
+        margin:4px; 
+        float:left;
+    }
+    #menu  
+    {  
+        width:180px;  
+        height:100%;  
+        background-color:RGB(216,216,216);  
+        padding:0px;  
+        margin:0px;  
+        float:left;
+    }  
+    /*去掉列表前的圆点*/  
+    #menu ul  
+    {  
+        width:180px;  
+        list-style-type:none;  
+        padding:0px;  
+        margin:0px; /*消除左侧间隙*/  
+    }  
+    #menu ul li  
+    {  
+        width:180px;/*填充满整个边栏*/  
+        /* 
+        margin:0px; 
+        padding:0px; 
+        */  
+    }  
+    #menu ul li a  
+    {  
+        display:block;  /*先转化成块级元素*/  
+        color:Gray;  
+        text-align:left;  
+        text-decoration:none;  
+        padding:10px 0px 10px 30px;/*设置距离左侧的边栏和上边距*/  
+        font-size:14px;  
+    }  
+    #menu ul li a:hover  
+    {  
+        color:Orange;  
+        text-align:left;  
+        text-decoration:none;  
+        padding:10px 0px 10px 30px;  
+        font-size:14px;  
+    }  
+    /*设置子菜单的样式*/  
+    #menu ul li ul  
+    {  
+        list-style-type:none;  
+        /* 
+        padding:0px; 
+        margin:0px; 
+        */  
+    }  
+    #menu ul li ul li  
+    {  
+        width:225px;    /*通过设置宽度来填充*/  
+    }  
+    #menu ul li ul li a  
+    {  
+        display:block;  
+        /*此处可以通过设置来调整相关的样式*/  
+        padding:6px 0px 6px 60px;  
+        text-align:left;  
+        text-decoration:none;  
+        font-size:12px;  
+    }  
+    #menu ul li ul li a:hover  
+    {  
+        padding:6px 0px 6px 60px;  
+        text-align:left;  
+        text-decoration:none;  
+        font-size:12px;  
+        color:Black;  
+        background-color:#CD2626;  
+    }  
+</style>  

@@ -210,6 +210,7 @@
 						</tr>
 					</table>
 				</form>
+				<div id="qryBookResult"></div>
 			</div>
 		</div>
 	</body>
