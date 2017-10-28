@@ -32,7 +32,7 @@ public class BookCodeDaolmpl implements IBookCodeDao{
 	@Override
 	public void deleteByBookId(Long id) {
 		// TODO Auto-generated method stub
-		getSession().createQuery("delete from BookCode as bc where bc.bookId="+id.toString()).executeUpdate()
+		getSession().createQuery("delete from BookCode as bc where bc.bookId="+id.toString()).executeUpdate();
 	}
 
 	@Override

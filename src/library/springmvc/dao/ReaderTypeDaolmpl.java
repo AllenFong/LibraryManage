@@ -17,7 +17,7 @@ public class ReaderTypeDaolmpl implements IReaderTypeDao{
 		return sessionFactory.getCurrentSession();
 	}
 	@Override
-	public List<ReaderType> finAll() {
+	public List<ReaderType> findAll() {
 		// TODO Auto-generated method stub
 		return getSession().createQuery("from ReaderType").getResultList();
 	}

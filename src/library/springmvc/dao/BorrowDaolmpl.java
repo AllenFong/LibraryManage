@@ -38,7 +38,7 @@ public class BorrowDaolmpl implements IBorrowDao{
 	@Override
 	public Borrow getBorrowedByBookCode(String bookCode) {
 		// TODO Auto-generated method stub
-		return getSession().createQuery("from Borrrow where="+bookCode+" and isReturn=0").;
+		return (Borrow) getSession().createQuery("from Borrrow where="+bookCode+" and isReturn=0").getSingleResult();
 	}
 
 }
