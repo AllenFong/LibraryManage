@@ -15,7 +15,7 @@ public class Operator {
 	@Column
 	private Long operId;
 	@Column
-	private String operName;
+	private String operName;	
 	@Column
 	private String gender;
 	@Column
@@ -28,37 +28,37 @@ public class Operator {
 		return operId;
 	}
 	public void setOperId(Long operId) {
-		this.operId=operId;
+		this.operId = operId;
 	}
 	public String getOperName() {
 		return operName;
 	}
 	public void setOperName(String operName) {
-		this.operName=operName;
+		this.operName = operName;
 	}
 	public String getGender() {
 		return gender;
 	}
 	public void setGender(String gender) {
-		this.gender=gender;
+		this.gender = gender;
 	}
 	public String getLoginName() {
 		return loginName;
 	}
 	public void setLoginName(String loginName) {
-		this.loginName=loginName;
+		this.loginName = loginName;
 	}
 	public String getPwd() {
 		return pwd;
 	}
 	public void setPwd(String pwd) {
-		this.pwd=pwd;
+		this.pwd = pwd;
 	}
 	public String getPhone() {
 		return phone;
 	}
 	public void setPhone(String phone) {
-		this.phone=phone;
+		this.phone = phone;
 	}
 
 }

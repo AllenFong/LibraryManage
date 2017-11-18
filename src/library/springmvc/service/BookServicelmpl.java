@@ -55,7 +55,7 @@ public class BookServicelmpl implements IBookService{
 	@Override
 	public void addBook(Book book) {
 		// TODO Auto-generated method stub
-		book.setCurrrentNum(book.getTotalNum());
+		book.setCurrentNum(book.getTotalNum());
 		Long bookId=bookDao.save(book);
 		book.setId(bookId);
 		bookCodeDao.insertBookCode(book);
@@ -88,9 +88,9 @@ public class BookServicelmpl implements IBookService{
 			//库存或图书类别发生变化,需要重新进行编号
 			bookCodeDao.deleteByBookId(book.getId());
 			bookCodeDao.insertBookCode(book);
-			book.setCurrrentNum(book.getTotalNum());
+			book.setCurrentNum(book.getTotalNum());
 		}
-		bookDao.updata(book);
+		bookDao.update(book);
 	}
 
 	@Override
@@ -114,14 +114,22 @@ public class BookServicelmpl implements IBookService{
 		readerDao.borrowBook(ReaderId);
 		BookCode bc=bookCodeDao.findById(BookCode);
 		Book book=bookDao.findById(bc.getBookId());
-		book.setCurrrentNum(book.getCurrentNum()-1);
-		bookDao.updata(book);
+		book.setCurrentNum(book.getCurrentNum()-1);
+		bookDao.update(book);
 	}
 
 	@Override
-	public void addReturn(String BookCode, Long opId) {
-		// TODO Auto-generated method stub
-		
+	public void updateBorrow(String bookCode, Long opId) {
+		Borrow borrow=borrowDao.getBorrowedByBookCode(bookCode);
+		borrow.setIsReturn((short) 1);
+		borrow.setReturnOperId(opId);
+		borrow.setReturnDate(new Date());
+		borrowDao.update(borrow);
+		readerDao.returnBook(borrow.getReaderId());
+		BookCode bc=bookCodeDao.findById(bookCode);
+		Book book=bookDao.findById(bc.getBookId());
+		book.setCurrentNum(book.getCurrentNum()+1);
+		bookDao.update(book);
 	}
 
 }

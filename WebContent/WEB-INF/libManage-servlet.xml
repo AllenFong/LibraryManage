@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xmlns:context="http://www.springframework.org/schema/context"
-	xmlns:mvc="http://www.springframework.org/schema/mvc" 
-xmlns:task="http://www.springframework.org/schema/task"
-xmlns:tx="http://www.springframework.org/schema/tx" 
-	xmlns:aop="http://www.springframework.org/schema/aop" 
-xmlns:cache="http://www.springframework.org/schema/cache"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc" xmlns:task="http://www.springframework.org/schema/task"
+	xmlns:tx="http://www.springframework.org/schema/tx" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:cache="http://www.springframework.org/schema/cache"
 	xsi:schemaLocation="http://www.springframework.org/schema/mvc 
         http://www.springframework.org/schema/mvc/spring-mvc-4.3.xsd
         http://www.springframework.org/schema/tx
@@ -22,20 +19,22 @@ xmlns:cache="http://www.springframework.org/schema/cache"
         http://www.springframework.org/schema/task 
         http://www.springframework.org/schema/task/spring-task-4.3.xsd">
 
+	<context:annotation-config />
 	<context:component-scan base-package="library.springmvc" />
 	<mvc:annotation-driven />
 	<bean
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-		<property name="prefix" value="/WEB-INF/jsp/" />
+		<property name="prefix" value="/jsp/" />
 		<property name="suffix" value=".jsp" />
 	</bean>
-		<!-- 配置数据源 -->
+	<!-- 配置数据源 -->
 	<bean id="dataSource"
 		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
 		<property name="driverClassName" value="com.mysql.jdbc.Driver"></property>
-		<property name="url" value="jdbc:mysql://localhost:3306/library?characterEncoding=UTF-8"></property>
-		<property name="username" value="tomcatUser"></property>
-		<property name="password" value="password1234"></property>
+		<property name="url"
+			value="jdbc:mysql://localhost:3306/library?characterEncoding=UTF-8"></property>
+		<property name="hibernate.connection.username" value="root"></property> 
+        <property name="hibernate.connection.password" value="1064777427"></property>
 	</bean>
 	<!-- 配置sessionFactory -->
 	<bean id="sessionFactory"
@@ -53,7 +52,7 @@ xmlns:cache="http://www.springframework.org/schema/cache"
 		</property>
 		<property name="packagesToScan" value="*" />
 	</bean>
-		<!-- 配置Hibernate事务管理器 -->
+	<!-- 配置Hibernate事务管理器 -->
 	<bean id="transactionManager"
 		class="org.springframework.orm.hibernate5.HibernateTransactionManager">
 		<property name="sessionFactory" ref="sessionFactory" />
@@ -74,5 +73,5 @@ xmlns:cache="http://www.springframework.org/schema/cache"
 		<!-- Advisor定义，切入点和通知分别为txPointcut、txAdvice -->
 		<aop:advisor advice-ref="txAdvice" pointcut-ref="txPointcut" />
 	</aop:config>
-	
+
 </beans>

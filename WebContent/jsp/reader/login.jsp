@@ -4,7 +4,7 @@
 <title>读者登录</title>
 </head>
 
-<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="../../js/jquery-3.2.1.min.js"></script>
 <script type="text/javascript">
 $(document).ready(
 		function() {

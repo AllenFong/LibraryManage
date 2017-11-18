@@ -11,5 +11,6 @@ public interface IOperatorService {
 	public List<Operator> findByColumn(String colName,String value);
 	public void update(Operator oper);
 	public void delete(Operator oper);
-	public Operator findById(long id);
+	public Operator findById(Long id);
+
 }

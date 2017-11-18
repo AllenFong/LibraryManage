@@ -9,50 +9,49 @@ import library.springmvc.dao.IOperatorDao;
 import library.springmvc.model.Operator;
 
 @Service("operService")
-public class OperatorServiceImpl implements IOperatorService{
+public class OperatorServiceImpl implements IOperatorService {
 	@Autowired
 	private IOperatorDao operDao;
 
+	public void setOperDao(IOperatorDao operDao) {
+		this.operDao = operDao;
+	}
+
 	@Override
 	public void addOperator(Operator oper) {
-		// TODO Auto-generated method stub
 		operDao.save(oper);
 	}
 
 	@Override
 	public List<Operator> findAll() {
-		// TODO Auto-generated method stub
 		return operDao.findAll();
 	}
 
 	@Override
-	public List<Operator> findWithWhere(String strWhere) {
-		// TODO Auto-generated method stub
-		return operDao.findWithWhere(strWhere);
-	}
-
-	@Override
-	public List<Operator> findByColumn(String colName, String value) {
-		// TODO Auto-generated method stub
+	public List<Operator> findByColumn(String colName, String value) {		
 		return operDao.findByColumn(colName, value);
 	}
 
 	@Override
 	public void update(Operator oper) {
-		// TODO Auto-generated method stub
 		operDao.update(oper);
+
 	}
 
 	@Override
 	public void delete(Operator oper) {
-		// TODO Auto-generated method stub
 		operDao.delete(oper);
+
 	}
 
 	@Override
-	public Operator findById(long id) {
-		// TODO Auto-generated method stub
+	public Operator findById(Long id) {
 		return operDao.findById(id);
+	}
+
+	@Override
+	public List<Operator> findWithWhere(String strWhere) {
+		return operDao.findWithWhere(strWhere);
 	}
 
 }

@@ -15,7 +15,6 @@ public interface IBookService {
 	public List<Book> findAllBooks();
 	public void delete(Book book);
 	public void update(Book book);
-	void addBorrow(Long ReaderId,String BookCode,Long operId);
-	void addReturn(String BookCode,Long opId);
-
+	void addBorrow(Long readerId, String bookCode,Long operId);
+	void updateBorrow(String bookCode,Long opId);
 }

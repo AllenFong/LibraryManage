@@ -42,55 +42,60 @@ public class Book {
 		return id;
 	}
 	public void setId(Long id) {
-		this.id=id;
+		this.id = id;
 	}
 	public String getISBN() {
 		return ISBN;
 	}
-	public void setISBN(String ISBN) {
-		this.ISBN=ISBN;
+	public void setISBN(String iSBN) {
+		ISBN = iSBN;
 	}
 	public String getBookName() {
 		return bookName;
 	}
 	public void setBookName(String bookName) {
-		this.bookName=bookName;
+		this.bookName = bookName;
 	}
 	public Short getBookTypeId() {
 		return bookTypeId;
 	}
 	public void setBookTypeId(Short bookTypeId) {
-		this.bookTypeId=bookTypeId;
+		this.bookTypeId = bookTypeId;
+	}
+	public Short getPublisherId() {
+		return publisherId;
+	}
+	public void setPublisherId(Short publisherId) {
+		this.publisherId = publisherId;
 	}
 	public String getAuthor() {
 		return author;
 	}
 	public void setAuthor(String author) {
-		this.author=author;
+		this.author = author;
 	}
 	public Date getPublishDate() {
 		return publishDate;
 	}
 	public void setPublishDate(Date publishDate) {
-		this.publishDate=publishDate;
+		this.publishDate = publishDate;
 	}
 	public Float getPrice() {
 		return price;
 	}
 	public void setPrice(Float price) {
-		this.price=price;
+		this.price = price;
 	}
 	public Integer getTotalNum() {
 		return totalNum;
 	}
 	public void setTotalNum(Integer totalNum) {
-		this.totalNum=totalNum;
+		this.totalNum = totalNum;
 	}
 	public Integer getCurrentNum() {
 		return currentNum;
 	}
-	public void setCurrrentNum(Integer currentNum) {
-		this.currentNum=currentNum;
+	public void setCurrentNum(Integer currentNum) {
+		this.currentNum = currentNum;
 	}
-
 }

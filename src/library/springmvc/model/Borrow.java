@@ -44,61 +44,60 @@ public class Borrow {
 		return id;
 	}
 	public void setId(Long id) {
-		this.id=id;
+		this.id = id;
 	}
 	public Long getReaderId() {
 		return readerId;
 	}
 	public void setReaderId(Long readerId) {
-		this.readerId=readerId;
+		this.readerId = readerId;
 	}
 	public String getBookCode() {
 		return bookCode;
 	}
 	public void setBookCode(String bookCode) {
-		this.bookCode=bookCode;
+		this.bookCode = bookCode;
 	}
 	public Long getBorrowOperId() {
 		return borrowOperId;
 	}
 	public void setBorrowOperId(Long borrowOperId) {
-		this.borrowOperId=borrowOperId;
+		this.borrowOperId = borrowOperId;
 	}
 	public Date getBorrowDate() {
 		return borrowDate;
 	}
 	public void setBorrowDate(Date borrowDate) {
-		this.borrowDate=borrowDate;
+		this.borrowDate = borrowDate;
 	}
 	public Date getLastDate() {
 		return lastDate;
 	}
 	public void setLastDate(Date lastDate) {
-		this.lastDate=lastDate;
+		this.lastDate = lastDate;
 	}
 	public Short getIsRenew() {
 		return isRenew;
 	}
 	public void setIsRenew(Short isRenew) {
-		this.isRenew=isRenew;
+		this.isRenew = isRenew;
 	}
 	public Short getIsReturn() {
 		return isReturn;
 	}
 	public void setIsReturn(Short isReturn) {
-		this.isReturn=isReturn;
+		this.isReturn = isReturn;
 	}
 	public Date getReturnDate() {
 		return returnDate;
 	}
 	public void setReturnDate(Date returnDate) {
-		this.returnDate=returnDate;
+		this.returnDate = returnDate;
 	}
 	public Long getReturnOperId() {
 		return returnOperId;
 	}
 	public void setReturnOperId(Long returnOperId) {
-		this.returnOperId=returnOperId;
+		this.returnOperId = returnOperId;
 	}
-	
 }

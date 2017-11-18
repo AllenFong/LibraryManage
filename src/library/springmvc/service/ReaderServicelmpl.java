@@ -74,7 +74,7 @@ public class ReaderServicelmpl implements IReaderService{
 	}
 
 	@Override
-	public int checkBorrrow(Long readerId, String bookCode) {
+	public int checkBorrow(Long readerId, String bookCode) {
 		// TODO Auto-generated method stub
 		List<Borrow> list=getReaderBorrowed(readerId);
 		Reader reader=findReaderById(readerId);

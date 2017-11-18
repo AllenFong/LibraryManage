@@ -1,7 +1,7 @@
 package library.springmvc.util;
 
 public class MyUtil {
-	public static String creatBookCode(Long bookId,Short bookTypeId,int i) {
+	public static String createBookCode(Long bookId,Short bookTypeId,int i) {
 		String code="";//3位bookTypeId-4位bookId-3位库存量序号
 		if(bookTypeId<10)
 			code=code+"00"+bookTypeId;
@@ -25,5 +25,4 @@ public class MyUtil {
 			code=code+"-"+i;
 		return code;
 	}
-
 }

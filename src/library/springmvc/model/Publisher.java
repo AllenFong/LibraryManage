@@ -17,13 +17,12 @@ public class Publisher {
 		return pubId;
 	}
 	public void setPubId(Short pubId) {
-		this.pubId=pubId;
+		this.pubId = pubId;
 	}
 	public String getPubName() {
 		return pubName;
 	}
 	public void setPubName(String pubName) {
-		this.pubName=pubName;
+		this.pubName = pubName;
 	}
-
 }
